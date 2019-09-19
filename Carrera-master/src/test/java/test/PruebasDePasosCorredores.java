@@ -16,7 +16,7 @@ import org.junit.Before;
  */
 public class PruebasDePasosCorredores {
    
-    Dato e;
+    Dato paso;
     
     Corredor11 corredorUnoA;
     
@@ -28,11 +28,11 @@ public class PruebasDePasosCorredores {
     }
      @Before
      public void iniciar(){
-        e=new Dato();
+        paso=new Dato();
         Map<Integer,String> lista=new HashMap<>();
-        corredorUnoA=new Corredor11(e, lista);
-        corredorDosB=new Corredor22(e, lista);
-        corredorTresC=new Corredor33(e, lista);
+        corredorUnoA=new Corredor11(paso, lista);
+        corredorDosB=new Corredor22(paso, lista);
+        corredorTresC=new Corredor33(paso, lista);
      }
      
      @Test
