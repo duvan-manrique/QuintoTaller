@@ -7,7 +7,8 @@ import java.util.logging.Logger;
 
 /**
  *Clase que imprime 
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Imprimir {
     

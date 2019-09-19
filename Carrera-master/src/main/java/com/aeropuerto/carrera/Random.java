@@ -3,7 +3,8 @@ package com.aeropuerto.carrera;
 
 /**
  * Clase que calcula un numero random
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Random {
     

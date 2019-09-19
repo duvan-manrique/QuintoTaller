@@ -9,7 +9,8 @@ import java.util.logging.Logger;
 
 /**
  * Clase que representa el corredor dos del equipo B
- * @author jeison gaona
+   @author ivan lopez
+ * @author duvan cañon
  */
 public class Corredor22 extends Thread{
 
@@ -73,7 +74,7 @@ public class Corredor22 extends Thread{
                pasos+=numero;
                posicion+=numero;
             
-            listaEquipoB.put(posicion,"\033[32m t");
+            listaEquipoB.put(posicion,"\033[35m t");
             Imprimir.imprimir(listaEquipoB, posicion);
             listaEquipoB.put(posicion," ");
             synchronized(paso){
@@ -106,6 +107,14 @@ public class Corredor22 extends Thread{
           valor=true; 
        }
       return valor;
+    }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
     }
         
 }

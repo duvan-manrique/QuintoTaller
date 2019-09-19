@@ -74,7 +74,7 @@ public class Corredor21 extends Thread{
                posicion+=numero;
             
             
-          listaEquipoA.put(posicion,"\033[31m t");
+          listaEquipoA.put(posicion,"\033[34m t");
           Imprimir.imprimir(listaEquipoA, posicion);
           listaEquipoA.put(posicion, " ");  
           synchronized(paso){
@@ -105,5 +105,14 @@ public class Corredor21 extends Thread{
        }
       return valor;
     }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
+    }
+    
     
 }

@@ -13,7 +13,8 @@ import java.util.logging.Logger;
 
 /**
  * Clase que representa el corredor uno del equipo A
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Corredor33 extends Thread{
 
@@ -100,7 +101,7 @@ public class Corredor33 extends Thread{
                posicion+=numero;
             
             
-           listaEquipoC.put(posicion,"\033[34m t");
+           listaEquipoC.put(posicion,"\033[33m t");
            Imprimir.imprimir(listaEquipoC, posicion);
            listaEquipoC.put(posicion, " "); 
            synchronized(paso){
@@ -109,7 +110,7 @@ public class Corredor33 extends Thread{
                     paso.setPasos(pasos);
                     corredorA.stop();
                     corredorB.stop();
-                    imprimirMedalla();
+                    imprimirGanador();
                     matarHilo(); 
                     break;
                 }
@@ -142,16 +143,11 @@ public class Corredor33 extends Thread{
      /**
      * Funcion que imprime la medalla en caso de ganar
      */
-    public void imprimirMedalla(){
-        System.out.println("   \033[34m____________   ");
-        System.out.println("  \033[34m/            \\   ");
-        System.out.println(" \033[34m/              \\");
-        System.out.println("\033[34m|                | ");
-        System.out.println("\033[34m| EQUIPO C(azul) |");
-        System.out.println("\033[34m|   GANADOR      |");
-        System.out.println("\033[34m|                | ");
-        System.out.println(" \033[34m\\              / ");
-        System.out.println("  \033[34m\\____________/");
+    public void imprimirGanador(){
+       
+        System.out.println("\033[33m EQUIPO 3 (Amarillo) ");
+        System.out.println("\033[33m   GANADOR      ");
+    
     }
 
     /**
@@ -184,6 +180,14 @@ public class Corredor33 extends Thread{
      */
     public void setCorredorB(Corredor32 corredorB) {
         this.corredorB = corredorB;
+    }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
     }
 
     

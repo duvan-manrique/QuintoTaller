@@ -3,7 +3,8 @@ package com.aeropuerto.carrera;
 
 /**
  *Clase que representa el objeto estafeta
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Dato {
 

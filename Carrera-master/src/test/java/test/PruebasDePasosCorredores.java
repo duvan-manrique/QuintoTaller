@@ -11,7 +11,8 @@ import org.junit.Before;
 
 /**
  * Pruebas unitarias para evaluar si acabo la carrera
- * @author jeison gaona
+  @author ivan lopez
+ * @author duvan cañon
  */
 public class PruebasDePasosCorredores {
    

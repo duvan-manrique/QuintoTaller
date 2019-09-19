@@ -9,7 +9,8 @@ import java.util.logging.Logger;
 
 /**
  * Clase que representa el corredor dos del equipo C
- * @author jeison gaona
+ *@author ivan lopez
+ * @author duvan cañon
  */
 public class Corredor23 extends Thread{
 
@@ -76,7 +77,7 @@ public class Corredor23 extends Thread{
                pasos+=numero;
                posicion+=numero;
             
-            listaEquipoC.put(posicion,"\033[34m t");
+            listaEquipoC.put(posicion,"\033[33m t");
             Imprimir.imprimir(listaEquipoC, posicion);
             listaEquipoC.put(posicion," ");
             synchronized(paso){
@@ -107,6 +108,14 @@ public class Corredor23 extends Thread{
           valor=true; 
        }
       return valor;
+    }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
     }
     
 }

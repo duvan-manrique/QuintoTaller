@@ -9,7 +9,8 @@ import java.util.logging.Logger;
 
 /**
  * Clase que representa el corredor tres del equipo B
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Corredor32 extends Thread{
 
@@ -95,7 +96,7 @@ public class Corredor32 extends Thread{
                posicion+=numero;
             
             
-           listaEquipoB.put(posicion,"\033[32m t");
+           listaEquipoB.put(posicion,"\033[35m t");
            Imprimir.imprimir(listaEquipoB, posicion);
            listaEquipoB.put(posicion, " ");   
            synchronized(paso){
@@ -167,15 +168,18 @@ public class Corredor32 extends Thread{
      * Funcion que imprime la medalla en caso de ganar
      */
     public void imprimirMedalla(){
-        System.out.println("   \033[32m____________   ");
-        System.out.println("  \033[32m/            \\   ");
-        System.out.println(" \033[32m/              \\");
-        System.out.println("\033[32m|                | ");
-        System.out.println("\033[32m| EQUIPO B(verde)|");
-        System.out.println("\033[32m|   GANADOR      |");
-        System.out.println("\033[32m|                | ");
-        System.out.println(" \033[32m\\              / ");
-        System.out.println("  \033[32m\\____________/");
+       
+        System.out.println("\033[35m EQUIPO 2(violeta)");
+        System.out.println("\033[35m    GANADOR      ");
+     
+    }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
     }
     
 }

@@ -6,7 +6,8 @@ import java.util.Map;
 
 /**
  * Clase que representa el corredor uno del equipo A
- * @author jeison gaona
+ * @author ivan lopez
+ * @author duvan cañon
  */
 public class Corredor11 extends Thread {
     
@@ -59,7 +60,7 @@ public class Corredor11 extends Thread {
             int numero=movimientos.devolverNumero();
                 pasos+=numero;
                 posicion+=numero;
-            listaEquipoA.put(posicion,"\033[31m t");
+            listaEquipoA.put(posicion,"\033[34m t");
             Imprimir.imprimir(listaEquipoA,posicion);
             listaEquipoA.put(posicion, " ");
             
@@ -89,6 +90,14 @@ public class Corredor11 extends Thread {
        }
           
       return valor;
+    }
+
+    public int getPasos() {
+        return pasos;
+    }
+
+    public void setPasos(int pasos) {
+        this.pasos = pasos;
     }
 
    
